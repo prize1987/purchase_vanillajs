@@ -3,16 +3,16 @@ export default class Loader {
   $loaderContent = null;
 
   constructor() {
-    this.$loader = document.querySelector(".loader");
-    this.$loaderContent = document.querySelector(".loader-content");
+    this.$loader = document.querySelector('.loader');
+    this.$loaderContent = document.querySelector('.loader-content');
   }
 
   show = (msg) => {
     this.$loaderContent.innerText = msg;
-    this.$loader.style.display = "";
-  }
+    this.$loader.style.display = '';
+  };
 
   hide = () => {
-    this.$loader.style.display = "none";
-  }
+    this.$loader.style.display = 'none';
+  };
 }

@@ -1,10 +1,10 @@
 @import url(//fonts.googleapis.com/earlyaccess/notosanskr.css);
 
-
-html, body {
+html,
+body {
   margin: 0;
   padding: 0;
-  background-color: #FEE500;
+  background-color: #fee500;
   font-family: 'Noto Sans KR', sans-serif;
 }
 
@@ -93,7 +93,7 @@ html, body {
 }
 
 .loader.hidden {
-  display: "none";
+  display: 'none';
 }
 
 .loader-content {

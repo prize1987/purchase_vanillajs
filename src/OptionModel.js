@@ -4,7 +4,7 @@ export default class OptionModel {
   mainOptions = [];
   subOptions = new Map();
 
-  constructor() { }
+  constructor() {}
 
   getSubOptions = async (id) => {
     if (this.subOptions.has(id)) {
@@ -13,7 +13,7 @@ export default class OptionModel {
       const response = await api.fetchSubOptions(id);
       if (response.ok) {
         // load stock and price
-        const ids = response.data.map(d => d.id).join(",");
+        const ids = response.data.map((d) => d.id).join(',');
         const stockInfos = await api.fetchStocks(ids);
         response.data.forEach((d) => {
           d.stock = stockInfos.data[d.id]?.stock;
@@ -26,7 +26,7 @@ export default class OptionModel {
         return null;
       }
     }
-  }
+  };
 
   getMainOptions = async () => {
     if (this.mainOptions.length > 0) {
@@ -40,5 +40,5 @@ export default class OptionModel {
         return null;
       }
     }
-  }
+  };
 }
