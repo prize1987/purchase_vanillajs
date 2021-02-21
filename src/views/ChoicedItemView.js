@@ -47,7 +47,7 @@ export default class ChoicedItemView {
     const detail = Array.from(this.items)
       .map((item) => {
         const name = item[0].slice(0, item[0].indexOf('('));
-        const price = parseInt(item[0].slice(item[0].indexOf('+') + 1, item[0].indexOf('원')));
+        const price = 10000 + parseInt(item[0].slice(item[0].indexOf('+') + 1, item[0].indexOf('원')));
         const qty = item[1];
 
         return `${name} ${price}원 ${qty}개, ${price * qty}원`;
